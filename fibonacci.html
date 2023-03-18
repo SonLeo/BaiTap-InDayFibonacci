@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        let num = parseInt(prompt("Nhập vào số lượng số Fibonacci muốn in ra:"));
+        let result = "Dãy Fibonacci: ";
+        let f1 = 1;
+        let f2 = 1;
+        let nextTerm;
+        for (let i = 1; i < num; i++) {
+            result += f1 + "; ";
+            nextTerm = f1 + f2;
+            f1 = f2;
+            f2 = nextTerm;
+        }
+        result += f1 + "."
+        document.getElementById("result").innerHTML = result;
+    </script>
+</body>
+</html>
